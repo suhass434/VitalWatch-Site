@@ -1,426 +1,561 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitalWatch - System Monitoring Software</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="light-mode">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">
-                <span class="logo">VitalWatch</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#screenshots">Screenshots</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                    <li class="nav-item">
-                        <button id="darkModeToggle" class="btn">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+/* General Styles */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --light-bg: #f8f9fa;
+  --light-text: #212529;
+  --dark-bg: #121212;
+  --dark-secondary-bg: #1e1e1e;
+  --dark-text: #e9ecef;
+  --transition-speed: 0.3s;
+}
 
-    <!-- Hero Section -->
-    <header class="hero" id="page-top">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>VitalWatch</h1>
-                    <h2>Keep Your System Healthy & Under Watch</h2>
-                    <p>A lightweight, powerful monitoring solution that keeps your system's vitals in check without hogging resources.</p>
-                    <a href="#download" class="btn btn-primary btn-lg download-btn">
-                        <i class="fas fa-download"></i> Download Now
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="hero-image">
-                        <img src="images/overview_tab.png" alt="VitalWatch Dashboard" class="img-fluid rounded shadow">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="text-center">Powerful Features</h2>
-            <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Real-time System Monitoring</h3>
-                        <p>Track CPU, RAM, disk, and network usage in real-time with detailed performance graphs.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3>Anomaly Detection</h3>
-                        <p>Automatically detect unusual system behavior and potential issues before they become critical.</p>
-                    </div>
-                </div>                
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-feather"></i>
-                        </div>
-                        <h3>Lightweight & Fast</h3>
-                        <p>Designed to run efficiently in the background with minimal impact on system performance.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3>Platform Compatibility</h3>
-                        <p>Runs natively on Linux and macOS. Windows support requires additional setup.</p>
-                    </div>
-                </div>                
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h3>Beautiful UI/UX</h3>
-                        <p>Clean, modern interface with customizable dashboards and data visualization.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box">
-                        <div class="feature-icon">
-                            <i class="fas fa-history"></i>
-                        </div>
-                        <h3>Historical Data Analysis</h3>
-                        <p>Track system performance over time with comprehensive historical reports and insights.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
 
-    <!-- Screenshots Section -->
-    <section class="screenshots" id="screenshots">
-        <div class="container">
-            <h2 class="text-center">See VitalWatch in Action</h2>
-            <div class="row mt-5">
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <div class="video-placeholder position-relative">
-                            <img src="images/demo.mp4" alt="VitalWatch Demo" class="img-fluid rounded shadow">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="screenshot-caption">Watch VitalWatch Demo</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/overview_tab.png" alt="Dashboard View" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Complete Dashboard View</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/overview_tab_lightmode.png" alt="Dashboard View" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Complete Dashboard View</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/cpu_tab.png" alt="CPU Monitoring" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Detailed CPU Monitoring</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/cpu_tab_lightmode.png" alt="CPU Monitoring" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Detailed CPU Monitoring</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/anomaly_not_detected.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/anomaly_detected.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/memory_tab.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/disk_tab.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/process_tab.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/battery_tab.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/settings_tab.png" alt="Memory Usage" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Memory Usage Analysis</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/network_tab.png" alt="CPU Monitoring" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Detailed CPU Monitoring</div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="screenshot">
-                        <img src="images/icon.png" alt="CPU Monitoring" class="img-fluid rounded shadow">
-                        <div class="screenshot-caption">Detailed CPU Monitoring</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
 
-    <!-- Download Section -->
-    <section class="download" id="download">
-        <div class="container">
-            <h2 class="text-center">Download VitalWatch</h2>
-            <p class="text-center lead">Get started with VitalWatch on your preferred platform.</p>
+section {
+  padding: 80px 0;
+}
 
-            <div class="download-options mt-5">
-                <ul class="nav nav-tabs justify-content-center" id="downloadTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux" type="button" role="tab" aria-controls="linux" aria-selected="true">
-                            <i class="fab fa-linux"></i> Linux
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="macos-tab" data-bs-toggle="tab" data-bs-target="#macos" type="button" role="tab" aria-controls="macos" aria-selected="false">
-                            <i class="fab fa-apple"></i> macOS
-                        </button>
-                    </li>
-                </ul>
-                
-                <div class="tab-content p-4 rounded shadow-sm" id="downloadTabContent">
-                    
-                    <!-- Linux Installation -->
-                    <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
-                        <h3>Linux Installation</h3>
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
 
-                        <!-- Download & Run -->
-                        <div class="install-method">
-                            <a href="app/vitalwatch.zip" class="btn btn-primary d-block mb-2">
-                                <i class="fas fa-download"></i> Download ZIP
-                            </a>
-                            <p><strong>Download & Run:</strong></p>
-                            <div class="code-block">
-                                <code>unzip vitalwatch.zip</code><br>
-                                <code>cd vitalwatch</code><br>
-                                <code>bash install_linux.sh</code>
-                            </div>
-                        </div>
+/* Navbar Styling */
+.navbar-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
 
-                        <!-- Clone & Run -->
-                        <div class="install-method mt-4">
-                            <a href="https://github.com/suhass434/vitalWatch_app" class="btn btn-outline-primary d-block mb-2" target="_blank">
-                                <i class="fab fa-github"></i> Clone from GitHub
-                            </a>
-                            <p><strong>Clone & Run:</strong></p>
-                            <div class="code-block">
-                                <code>git clone https://github.com/suhass434/vitalWatch_app.git</code><br>
-                                <code>cd vitalWatch_app</code><br>
-                                <code>bash install_linux.sh</code>
-                            </div>
-                        </div>
-                    </div>
+#mainNav {
+  transition: all var(--transition-speed);
+  padding: 15px 0;
+  z-index: 1000;
+}
 
-                    <!-- macOS Installation -->
-                    <div class="tab-pane fade" id="macos" role="tabpanel" aria-labelledby="macos-tab">
-                        <h3>macOS Installation</h3>
+.light-mode #mainNav {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-                        <!-- Download & Run -->
-                        <div class="install-method">
-                            <a href="app/vitalwatch.zip" class="btn btn-primary d-block mb-2">
-                                <i class="fas fa-download"></i> Download ZIP
-                            </a>
-                            <p><strong>Download & Run:</strong></p>
-                            <div class="code-block">
-                                <code>unzip vitalwatch.zip</code><br>
-                                <code>cd vitalwatch</code><br>
-                                <code>bash install_macos.sh</code>
-                            </div>
-                        </div>
+.dark-mode #mainNav {
+  background-color: rgba(18, 18, 18, 0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
 
-                        <!-- Clone & Run -->
-                        <div class="install-method mt-4">
-                            <a href="https://github.com/suhass434/vitalWatch" class="btn btn-outline-primary d-block mb-2" target="_blank">
-                                <i class="fab fa-github"></i> Clone from GitHub
-                            </a>
-                            <p><strong>Clone & Run:</strong></p>
-                            <div class="code-block">
-                                <code>git clone https://github.com/suhass434/vitalWatch.git</code><br>
-                                <code>cd vitalWatch</code><br>
-                                <code>bash install_macos.sh</code>
-                            </div>
-                        </div>
-                    </div>
+.navbar-brand .logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-                </div>
+.light-mode .nav-link {
+  color: var(--light-text);
+}
 
-                <!-- Common Source Code Section -->
-                <div class="text-center mt-4">
-                    <p><strong>View the full source code:</strong></p>
-                    <a href="https://github.com/suhass434/vitalWatch" class="btn btn-outline-secondary" target="_blank">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+.dark-mode .nav-link {
+  color: var(--dark-text);
+}
 
+.nav-link {
+  font-weight: 500;
+  padding: 8px 15px !important;
+}
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="text-center">Frequently Asked Questions</h2>
-            <div class="accordion mt-5" id="faqAccordion">
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is VitalWatch?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            VitalWatch is a system monitoring tool that helps users track system performance, including CPU usage, memory consumption, disk activity, and more.
-                        </div>
-                    </div>
-                </div>
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How do I install VitalWatch?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            You can install VitalWatch by downloading the ZIP file from our website or cloning the repository from GitHub. Installation scripts for Linux and macOS are provided to simplify setup.
-                        </div>
-                    </div>
-                </div>
+#darkModeToggle {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: transform 0.2s;
+}
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Does VitalWatch support Apple M1/M2 chips?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes! VitalWatch is fully optimized for Apple Silicon. Our macOS version is universal and runs natively on both Intel and M1/M2 Macs, providing excellent performance and battery efficiency.
-                        </div>
-                    </div>
-                </div>
+#darkModeToggle:hover {
+  transform: rotate(15deg);
+}
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            How much system resources does VitalWatch use?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            VitalWatch is designed to be extremely lightweight. It typically uses less than 0.5% CPU and under 100MB of RAM when running in the background. The application is optimized to have minimal impact on your system while still providing comprehensive monitoring.
-                        </div>
-                    </div>
-                </div>
+.light-mode #darkModeToggle {
+  color: #212529;
+}
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Is VitalWatch open source?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes, VitalWatch is open-source software released under the MIT license. You can find the source code, contribute, and submit issues on our GitHub repository.
-                        </div>
-                    </div>
-                </div>
+.dark-mode #darkModeToggle {
+  color: #f8f9fa;
+}
 
-            </div>
-        </div>
-    </section>
+/* Hero Section */
+.hero {
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h3>VitalWatch</h3>
-                    <p>Keep your system healthy and under watch with our powerful monitoring solution.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h4>Connect with Us</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/suhass434"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/suhass434/"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/suhass434/vitalWatch_app">GitHub Repository</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright text-center mt-4">
-                <p>&copy; 2025 VitalWatch. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.dark-mode .hero-image img {
+  filter: brightness(0.85);
+}
+
+.download-btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s;
+}
+
+.download-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+}
+
+/* Features Section */
+.feature-box {
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.light-mode .feature-box {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .feature-box {
+  background-color: var(--dark-secondary-bg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.feature-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Screenshots Section */
+.screenshots {
+  background-color: rgba(67, 97, 238, 0.05);
+}
+
+.dark-mode .screenshots {
+  background-color: rgba(67, 97, 238, 0.03);
+}
+
+.screenshot {
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.screenshot:hover {
+  transform: translateY(-5px);
+}
+
+.screenshot img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.dark-mode .screenshot img {
+  filter: brightness(0.85);
+}
+
+.screenshot-caption {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.video-placeholder {
+  cursor: pointer;
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgba(67, 97, 238, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.play-button:hover {
+  background-color: var(--primary-color);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Download Section */
+.os-detection {
+  margin: 40px 0;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.light-mode .os-detection {
+  background-color: rgba(67, 97, 238, 0.08);
+}
+
+.dark-mode .os-detection {
+  background-color: rgba(67, 97, 238, 0.12);
+}
+
+.download-options {
+  margin-top: 50px;
+}
+
+.light-mode .tab-content {
+  background-color: white;
+}
+
+.dark-mode .tab-content {
+  background-color: var(--dark-secondary-bg);
+}
+
+.light-mode .nav-tabs .nav-link {
+  color: var(--light-text);
+}
+
+.dark-mode .nav-tabs .nav-link {
+  color: var(--dark-text);
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  border-radius: 5px 5px 0 0;
+}
+
+.light-mode .nav-tabs .nav-link.active {
+  background-color: white;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+  background-color: var(--dark-secondary-bg);
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.code-block {
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.light-mode .code-block {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.dark-mode .code-block {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+}
+
+.installation-steps {
+  margin-top: 20px;
+}
+
+.separator {
+  width: 2px;
+  background-color: #ddd;
+  margin: 0 20px;
+}
+.install-method {
+  flex: 1;
+}
+.code-block {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.separator {
+  width: 2px;
+  background-color: #ccc;
+  margin: 0 20px;
+}
+.install-method {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* FAQ Section */
+.accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.light-mode .accordion-item {
+  background-color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .accordion-item {
+  background-color: var(--dark-secondary-bg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-button {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.light-mode .accordion-button {
+  background-color: white;
+  color: var(--light-text);
+}
+
+.dark-mode .accordion-button {
+  background-color: var(--dark-secondary-bg);
+  color: var(--dark-text);
+}
+
+.light-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(67, 97, 238, 0.08);
+  color: var(--primary-color);
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: rgba(67, 97, 238, 0.15);
+  color: var(--primary-color);
+}
+
+.light-mode .accordion-button::after {
+  filter: none;
+}
+
+.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.light-mode .accordion-body {
+  background-color: white;
+  color: var(--light-text);
+}
+
+.dark-mode .accordion-body {
+  background-color: var(--dark-secondary-bg);
+  color: var(--dark-text);
+}
+
+/* Footer */
+.footer {
+  padding: 70px 0 30px;
+}
+
+.light-mode .footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+}
+
+.dark-mode .footer {
+  background-color: #0e0e0e;
+  border-top: 1px solid #1e1e1e;
+}
+
+.footer h3, .footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer p {
+  opacity: 0.8;
+}
+
+.social-links {
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+  padding-left: 5px;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 130px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-video {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+  
+  .feature-box, .screenshot {
+    margin-bottom: 20px;
+  }
+  
+  .installation-steps ol {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 120px 0 40px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .download-btn {
+    width: 100%;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 10px !important;
+  }
+  
+  .download-linux {
+    flex-direction: column;
+  }
+  
+  .download-linux a {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
