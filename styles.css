@@ -35,6 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navbar Styling */
+.navbar-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
 #mainNav {
   transition: all var(--transition-speed);
   padding: 15px 0;
@@ -395,6 +402,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
 }
 
+.light-mode .accordion-body {
+  background-color: white;
+  color: var(--light-text);
+}
+
+.dark-mode .accordion-body {
+  background-color: var(--dark-secondary-bg);
+  color: var(--dark-text);
+}
+
 /* Footer */
 .footer {
   padding: 70px 0 30px;
@@ -479,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
   }
   
-  .hero-image {
+  .hero-video {
     margin-top: 40px;
   }
 }
