@@ -346,6 +346,45 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 250px;
 }
 
+.code-block {
+  font-size: 14px; /* Smaller font size */
+  line-height: 1.5; /* Adjust line height */
+}
+
+.code-block code {
+  display: inline-block; /* Ensure code blocks don't overlap */
+  margin-right: 10px; /* Add spacing between code and button */
+}
+
+.dark-mode .command-box {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #f8f9fa;
+}
+
+.dark-mode .command-box code {
+  color: #f8f9fa;
+}
+
+.dark-mode .code-block {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+}
+
+.command-box {
+  background-color: #f8f9fa; /* Light gray background */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px 12px; /* Padding inside the box */
+  margin-bottom: 8px; /* Spacing between boxes */
+  font-family: monospace; /* Monospace font for code */
+  font-size: 14px; /* Smaller font size */
+  overflow-x: auto; /* Horizontal scroll for long commands */
+}
+
+.command-box code {
+  color: #333; /* Dark text color */
+}
 /* FAQ Section */
 .accordion-item {
   border: none;

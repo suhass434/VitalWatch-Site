@@ -205,103 +205,155 @@
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section class="download" id="download">
-        <div class="container">
-            <h2 class="text-center">Download VitalWatch</h2>
-            <p class="text-center lead">Get started with VitalWatch on your preferred platform.</p>
+<!-- Download Section -->
+<section class="download" id="download">
+    <div class="container">
+        <h2 class="text-center">Download VitalWatch</h2>
+        <p class="text-center lead">Get started with VitalWatch on your preferred platform.</p>
 
-            <div class="download-options mt-5">
-                <ul class="nav nav-tabs justify-content-center" id="downloadTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux" type="button" role="tab" aria-controls="linux" aria-selected="true">
-                            <i class="fab fa-linux"></i> Linux
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="macos-tab" data-bs-toggle="tab" data-bs-target="#macos" type="button" role="tab" aria-controls="macos" aria-selected="false">
-                            <i class="fab fa-apple"></i> macOS
-                        </button>
-                    </li>
-                </ul>
+        <div class="download-options mt-5">
+            <ul class="nav nav-tabs justify-content-center" id="downloadTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="linux-tab" data-bs-toggle="tab" data-bs-target="#linux" type="button" role="tab" aria-controls="linux" aria-selected="true">
+                        <i class="fab fa-linux"></i> Linux
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="macos-tab" data-bs-toggle="tab" data-bs-target="#macos" type="button" role="tab" aria-controls="macos" aria-selected="false">
+                        <i class="fab fa-apple"></i> macOS
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content p-4 rounded shadow-sm" id="downloadTabContent">
                 
-                <div class="tab-content p-4 rounded shadow-sm" id="downloadTabContent">
-                    
-                    <!-- Linux Installation -->
-                    <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
-                        <h3>Linux Installation</h3>
+                <!-- Linux Installation -->
+                <div class="tab-pane fade show active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
+                    <h3>Linux Installation</h3>
 
-                        <!-- Download & Run -->
-                        <div class="install-method">
-                            <a href="app/vitalwatch_app.zip" class="btn btn-primary d-block mb-2">
-                                <i class="fas fa-download"></i> Download ZIP
-                            </a>
-                            <p><strong>Download & Run:</strong></p>
-                            <div class="code-block">
-                                <code>unzip vitalwatch_app.zip</code><br>
-                                <code>cd vitalwatch_app</code><br>
-                                <code>bash install_linux.sh</code>
+                    <!-- Download & Run -->
+                    <div class="install-method">
+                        <a href="https://www.dropbox.com/scl/fi/4rtpe0gzrvlivcgt0s3h2/vitalwatch_app.zip?rlkey=g658wmgiglr33pqst78akdn37&st=u7t6pzac&dl=1" class="btn btn-primary d-block mb-2" download>
+                            <i class="fas fa-download"></i> Download ZIP
+                        </a>
+                        <p><strong>Download & Run:</strong></p>
+                        <div class="code-block">
+                            <div class="command-box">
+                                <code>unzip vitalwatch_app.zip</code>
                             </div>
-                        </div>
-
-                        <!-- Clone & Run -->
-                        <div class="install-method mt-4">
-                            <a href="https://github.com/suhass434/vitalWatch_app" class="btn btn-outline-primary d-block mb-2" target="_blank">
-                                <i class="fab fa-github"></i> Clone from GitHub
-                            </a>
-                            <p><strong>Clone & Run:</strong></p>
-                            <div class="code-block">
-                                <code>git clone https://github.com/suhass434/vitalWatch_app.git</code><br>
-                                <code>cd vitalWatch_app</code><br>
+                            <div class="command-box">
+                                <code>cd vitalwatch_app</code>
+                            </div>
+                            <div class="command-box">
                                 <code>bash install_linux.sh</code>
                             </div>
                         </div>
                     </div>
 
-                    <!-- macOS Installation -->
-                    <div class="tab-pane fade" id="macos" role="tabpanel" aria-labelledby="macos-tab">
-                        <h3>macOS Installation</h3>
-
-                        <!-- Download & Run -->
-                        <div class="install-method">
-                            <a href="app/vitalwatch_app.zip" class="btn btn-primary d-block mb-2">
-                                <i class="fas fa-download"></i> Download ZIP
-                            </a>
-                            <p><strong>Download & Run:</strong></p>
-                            <div class="code-block">
-                                <code>unzip vitalwatch_app.zip</code><br>
-                                <code>cd vitalwatch_app</code><br>
-                                <code>bash install_macos.sh</code>
+                    <!-- Clone & Run -->
+                    <div class="install-method mt-4">
+                        <a href="https://github.com/suhass434/vitalWatch_app" class="btn btn-primary d-block mb-2" target="_blank">
+                            <i class="fab fa-github"></i> Clone from GitHub
+                        </a>
+                        <p><strong>Clone & Run:</strong></p>
+                        <div class="code-block">
+                            <div class="command-box">
+                                <code>git clone https://github.com/suhass434/vitalWatch_app.git</code>
                             </div>
-                        </div>
-
-                        <!-- Clone & Run -->
-                        <div class="install-method mt-4">
-                            <a href="https://github.com/suhass434/vitalWatch_app.git" class="btn btn-outline-primary d-block mb-2" target="_blank">
-                                <i class="fab fa-github"></i> Clone from GitHub
-                            </a>
-                            <p><strong>Clone & Run:</strong></p>
-                            <div class="code-block">
-                                <code>git clone https://github.com/suhass434/vitalWatch_app.git</code><br>
-                                <code>cd vitalwatch_app</code><br>
-                                <code>bash install_macos.sh</code>
+                            <div class="command-box">
+                                <code>cd vitalwatch_app</code>
+                            </div>
+                            <div class="command-box">
+                                <code>git lfs install</code>
+                            </div>
+                            <div class="command-box">
+                                <code>git lfs pull</code>
+                            </div>
+                            <div class="command-box">
+                                <code>bash install_linux.sh</code>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- Common Source Code Section -->
-                <div class="text-center mt-4">
-                    <p><strong>View the full source code:</strong></p>
-                    <a href="https://github.com/suhass434/vitalWatch" class="btn btn-outline-secondary" target="_blank">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a>
+                <!-- macOS Installation -->
+                <div class="tab-pane fade" id="macos" role="tabpanel" aria-labelledby="macos-tab">
+                    <h3>macOS Installation</h3>
+
+                    <!-- Download & Run -->
+                    <div class="install-method">
+                        <a href="https://www.dropbox.com/scl/fi/4rtpe0gzrvlivcgt0s3h2/vitalwatch_app.zip?rlkey=g658wmgiglr33pqst78akdn37&st=u7t6pzac&dl=1" class="btn btn-primary d-block mb-2" download>
+                            <i class="fas fa-download"></i> Download ZIP
+                        </a>
+                        <p><strong>Download & Run:</strong></p>
+                        <div class="code-block">
+                            <div class="command-box">
+                                <code>unzip vitalwatch_app.zip</code>
+                            </div>
+                            <div class="command-box">
+                                <code>cd vitalwatch_app</code>
+                            </div>
+                            <div class="command-box">
+                                <code>bash install_macos.sh</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clone & Run -->
+                    <div class="install-method mt-4">
+                        <a href="https://github.com/suhass434/vitalWatch_app.git" class="btn btn-primary d-block mb-2" target="_blank">
+                            <i class="fab fa-github"></i> Clone from GitHub
+                        </a>
+                        <p><strong>Clone & Run:</strong></p>
+                        <div class="code-block">
+                            <div class="command-box">
+                                <code>git clone https://github.com/suhass434/vitalWatch_app.git</code>
+                            </div>
+                            <div class="command-box">
+                                <code>cd vitalwatch_app</code>
+                            </div>
+                            <div class="command-box">
+                                <code>git lfs install</code>
+                            </div>
+                            <div class="command-box">
+                                <code>git lfs pull</code>
+                            </div>
+                            <div class="command-box">
+                                <code>bash install_macos.sh</code>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- Common Source Code Section -->
+            <div class="text-center mt-4">
+                <p><strong>View the full source code:</strong></p>
+                <a href="https://github.com/suhass434/vitalWatch" class="btn btn-outline-secondary" target="_blank">
+                    <i class="fab fa-github"></i> View Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom CSS for command boxes -->
+<style>
+    .command-box {
+        background-color: #f8f9fa; /* Light gray background */
+        border: 1px solid #dee2e6; /* Light border */
+        border-radius: 4px; /* Rounded corners */
+        padding: 8px 12px; /* Padding inside the box */
+        margin-bottom: 8px; /* Spacing between boxes */
+        font-family: monospace; /* Monospace font for code */
+        font-size: 14px; /* Smaller font size */
+        overflow-x: auto; /* Horizontal scroll for long commands */
+    }
+
+    .command-box code {
+        color: #333; /* Dark text color */
+    }
+</style>
 
     <!-- FAQ Section -->
     <section class="faq" id="faq">
