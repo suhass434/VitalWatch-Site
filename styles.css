@@ -385,6 +385,20 @@ h1, h2, h3, h4, h5, h6 {
 .command-box code {
   color: #333; /* Dark text color */
 }
+.or-divider {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.dark-mode .or-divider {
+  background-color: #343a40;
+  color: #adb5bd;
+}
+
 /* FAQ Section */
 .accordion-item {
   border: none;
